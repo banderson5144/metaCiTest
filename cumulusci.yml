@@ -1,0 +1,23 @@
+minimum_cumulusci_version: '3.15.0'
+project:
+    name: metaCiTest
+    package:
+        name:  metaCiTest
+        api_version: '48.0'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/metaCiTest/tests
+            options:
+                outputdir: robot/metaCiTest/results
+
+    robot_testdoc:
+        options:
+            path: robot/metaCiTest/tests
+            output: robot/metaCiTest/doc/metaCiTest_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 80
