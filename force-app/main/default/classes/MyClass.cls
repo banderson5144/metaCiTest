@@ -1,6 +1,6 @@
 public with sharing class MyClass {
     public static void myMethod()
     {
-        System.debug('Hello World3');
+        System.debug('Hello World4');
     }
 }
