@@ -24,9 +24,9 @@ tasks:
     
     my_dx_deploy:
         description: my custom deploy task
-            class_path: cumulusci.tasks.sfdx.SFDXOrgTask
-            options:
-                command: force:source:deploy
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: force:source:deploy -p force-app
 
 flows:
     my_deploy:
