@@ -11,6 +11,6 @@
 public with sharing class MyClass {
     public static void myMethod()
     {
-        System.debug('Hello World8');
+        System.debug('Hello World9');
     }
 }
