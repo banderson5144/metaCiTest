@@ -26,4 +26,5 @@ flows:
     my_deploy:
         description: my custom deploy
         steps:
-            1: dx_push
+            0:
+                task: dx_push
