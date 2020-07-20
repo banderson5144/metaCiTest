@@ -21,10 +21,16 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 80
+    
+    my_dx_deploy:
+        description: my custom deploy task
+            class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+            options:
+                command: force:source:deploy
 
 flows:
     my_deploy:
         description: my custom deploy
         steps:
             0:
-                task: dx_push
+                task: my_dx_deploy
