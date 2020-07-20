@@ -21,3 +21,9 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 80
+
+flows:
+    my_deploy:
+        description: my custom deploy
+        steps:
+            1: dx_push
