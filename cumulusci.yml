@@ -2,7 +2,9 @@ minimum_cumulusci_version: '3.15.0'
 project:
     name: metaCiTest
     package:
-        name:  metaCiTest
+        name:  bandy_foo
+        name_managed: bandy_bar
+        namespace: bandy_packaging
         api_version: '48.0'
     source_format: sfdx
 
