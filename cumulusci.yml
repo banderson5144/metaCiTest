@@ -29,6 +29,11 @@ tasks:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: force:source:deploy -p force-app
+    my_data_deploy:
+        description: my custom data deploy task
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: force:data:tree:import -p Account-Contact-plan.json
 
 flows:
     my_deploy:
@@ -37,8 +42,5 @@ flows:
             0:
                 task: my_dx_deploy
             1:
-                task: load_dataset
-                options:
-                    mapping: datasets/mapping.yml
-                    sql_path: datasets/my_sample.sql            
+                task: my_data_deploy            
                 
