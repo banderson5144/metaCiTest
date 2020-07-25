@@ -42,5 +42,8 @@ flows:
             0:
                 task: my_dx_deploy
             1:
-                task: my_data_deploy            
+                task: load_dataset
+                options:
+                    mapping: datasets/mapping.yml
+                    sql_path: datasets/my_sample.sql            
                 
