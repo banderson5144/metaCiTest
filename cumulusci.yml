@@ -29,6 +29,19 @@ tasks:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: force:source:deploy -p force-app
+    
+    install_sfdm:
+        description: Install Salesforce Data mover
+        class_path: cumulusci.tasks.command.Command
+        options:
+            command: sfdx plugins:install sfdmu
+
+    run_sfdm:
+        description: Run Salesforce Data mover
+        class_path: cumulusci.tasks.command.Command
+        options:
+            command: sfdx sfdmu:run --targetusername bandy@metaci.com --sourceusername csvfile
+
     my_data_deploy:
         description: my custom data deploy task
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
@@ -42,5 +55,7 @@ flows:
             0:
                 task: my_dx_deploy
             1:
-                task: my_data_deploy            
+                task: install_sfdm
+            2:
+                task: run_sfdm
                 
