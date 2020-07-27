@@ -1,0 +1,14 @@
+{
+    "objects": [
+        {
+            "query": "SELECT Id,Name FROM Account",
+            "operation": "Upsert",
+            "externalId": "Name"
+        },
+        {
+            "query": "SELECT Id,FirstName,LastName,AccountId,Email FROM Contact",
+            "operation": "Upsert",
+            "externalId": "Email"
+        }
+    ]
+}
