@@ -34,7 +34,7 @@ tasks:
         description: Install Salesforce Data mover
         class_path: cumulusci.tasks.command.Command
         options:
-            command: sfdx plugins:install sfdmu --force
+            command: echo y | sfdx plugins:install sfdmu --force
 
     run_sfdm:
         description: Run Salesforce Data mover
