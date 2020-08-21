@@ -54,8 +54,7 @@ flows:
         steps:
             0:
                 task: my_dx_deploy
-            1:
-                task: install_sfdm
-            2:
-                task: run_sfdm
-                
+#            1:
+#                task: install_sfdm
+#            2:
+#                task: run_sfdm                
