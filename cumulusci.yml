@@ -4,7 +4,7 @@ project:
     package:
         name:  bandy_foo
         name_managed: bandy_bar
-        namespace: bandy_packaging
+        namespace: fooey
         api_version: '48.0'
     source_format: sfdx
 
