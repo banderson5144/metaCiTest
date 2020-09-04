@@ -8,6 +8,13 @@ project:
         api_version: '48.0'
     source_format: sfdx
 
+orgs:
+    scratch:
+        mydev:
+            config_file: orgs/dev.json
+            days: 3
+            namespaced: True
+
 tasks:
     robot:
         options:
